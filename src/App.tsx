@@ -1,41 +1,12 @@
-import { useEffect, useState } from "react";
-import WebFont from "webfontloader";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import reactLogo from "./assets/react.svg";
+import { useSettings } from "./utils/hooks/use-settings";
+import viteLogo from "/vite.svg";
+import useSetFonts from "./utils/hooks/use-set-fonts";
 
 function App() {
-  const [fontType, setFontType] = useState("Droid Sans");
-
-  const changeFont = () => {
-    if (fontType === "Droid Sans") {
-      setFontType("Chilanka");
-      return;
-    }
-    setFontType("Droid Sans");
-  };
-
-  useEffect(() => {
-    if (fontType === "Droid Sans") {
-      WebFont.load({
-        google: {
-          families: ["Droid Sans"],
-        },
-      });
-      document.documentElement.style.setProperty(
-        "--dynamic-fonts",
-        "Droid Sans"
-      );
-    }
-    if (fontType === "Chilanka") {
-      WebFont.load({
-        google: {
-          families: ["Chilanka"],
-        },
-      });
-      document.documentElement.style.setProperty("--dynamic-fonts", "Chilanka");
-    }
-  }, [fontType]);
+  const settings = useSettings();
+  useSetFonts();
 
   return (
     <div>
@@ -49,7 +20,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={changeFont}>count is {fontType}</button>
+        <button>count is {settings?.settings.fonts}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
