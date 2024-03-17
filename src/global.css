@@ -22,6 +22,7 @@
 * {
   font-family: var(--dynamic-fonts);
   font-weight: 700;
+  color: var(--font-primary);
   font-style: normal;
   box-sizing: border-box;
   padding: 0;
