@@ -1,6 +1,6 @@
 import React from "react";
 
-export type Fonts = "Droid Sans" | "Chilanka";
+export type Fonts = "Roboto" | "Droid Sans" | "Space Mono";
 export type AccentColor = "PRIMARY" | "SECONDARY" | "TERTIARY";
 
 export interface Settings {
@@ -14,7 +14,7 @@ export interface Settings {
 }
 
 const defaultSettings: Settings = {
-  fonts: "Droid Sans",
+  fonts: "Roboto",
   accentColor: "PRIMARY",
   pomodoroSettings: {
     workTime: 25,

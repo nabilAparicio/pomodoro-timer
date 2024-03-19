@@ -16,7 +16,7 @@
   --accent-secondary-option: #D080F2;
   --accent-tertiary-option: #6DF2F2;
 
-  --dynamic-fonts: "Droid Sans", "Chilanka", system-ui, monospace;
+  --dynamic-fonts: "Roboto", "Chilanka", system-ui, monospace;
 }
 
 * {
