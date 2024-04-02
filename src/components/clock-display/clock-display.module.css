@@ -1,0 +1,33 @@
+.mainContainer{
+  box-sizing: border-box;
+  border-radius: 500px;
+  position: relative;
+  max-height: fit-content;
+  border-style:  solid;
+  border-color: var(--cards-dark-background);
+  box-shadow:  20px 20px 60px #14182d,
+                -20px -20px 60px #31375a;
+  padding: 3px;
+}
+.circleBackground{
+  fill: none;
+  stroke: transparent;
+}
+.circleProgress{
+  fill: none;
+  stroke: var(--accent-primary-option);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.childrenContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
